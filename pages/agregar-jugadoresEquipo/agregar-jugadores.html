@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Home</title>
+
+    <!-- Normalize V8.0.1 -->
+    <link rel="stylesheet" href="../../css/normalize.css">
+
+    <!-- Bootstrap V4.3 -->
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+
+    <!-- Bootstrap Material Design V4.0 -->
+    <link rel="stylesheet" href="../../css/bootstrap-material-design.min.css">
+
+    <!-- Font Awesome V5.9.0 -->
+    <link rel="stylesheet" href="../../css/all.css">
+
+    <!-- Sweet Alerts V8.13.0 CSS file -->
+    <link rel="stylesheet" href="../../css/sweetalert2.min.css">
+
+    <!-- Sweet Alert V8.13.0 JS file-->
+    <script src="../../js/sweetalert2.min.js"></script>
+
+    <!-- jQuery Custom Content Scroller V3.1.5 -->
+    <link rel="stylesheet" href="../../css/jquery.mCustomScrollbar.css">
+
+    <!-- General Styles -->
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <style>
+        /* Mejoras en los estilos generales */
+        .card {
+            border-radius: 15px;
+            border: none;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+    
+        .card-title {
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+    
+        .btn-primary {
+            background-color: #ea642a;
+            border-color: #ea642a;
+            padding: 0.5rem 1.5rem;
+            font-weight: 500;
+        }
+    
+        .btn-primary:hover {
+            background-color: #ea642a;
+            border-color: #ea642a;
+        }
+    
+        .table thead {
+            background-color: #f8f9fa;
+        }
+    
+        .table th, .table td {
+            vertical-align: middle;
+        }
+    
+        .input-group input {
+            border-radius: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        }
+    
+        .input-group button {
+            background-color: #ea642a;
+            border-color: #ea642a;
+            color: #fff;
+            padding: 0.5rem 1.25rem;
+            border-radius: 20px;
+        }
+    
+        .input-group button:hover {
+            background-color: #ea642a;
+            border-color: #ea642a;
+        }
+    
+        .table-hover tbody tr:hover {
+            background-color: #f1f1f1;
+            transition: background-color 0.3s;
+        }
+    
+        .table td img {
+            border-radius: 50%;
+            max-width: 40px;
+            max-height: 40px;
+            object-fit: cover;
+        }
+    
+        .card-body {
+            padding: 2rem;
+        }
+    
+        .card-body .input-group {
+            margin-bottom: 1.5rem;
+        }
+    
+        .card-body table {
+            margin-top: 1.5rem;
+        }
+    
+        /* Asegurar que el contenedor del selector de liga esté centrado */
+        .row.justify-content-center {
+            justify-content: center;
+        }
+    
+        .col-md-6 {
+            max-width: 650px;
+        }
+    
+        /* Centrar el título y el select */
+        .card-title {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+    
+        /* Mejora del fondo de la página */
+        body {
+            background-color: #f4f6f9;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Main container -->
+    <main class="full-box main-container">
+        <!-- Nav lateral -->
+        <section class="full-box nav-lateral">
+            <div class="full-box nav-lateral-bg show-nav-lateral"></div>
+            <div class="full-box nav-lateral-content">
+                <figure class="full-box nav-lateral-avatar">
+                    <i class="far fa-times-circle show-nav-lateral"></i>
+                    <img src="../../assets/img/logoFut.png" class="img-fluid" alt="Avatar">
+                    <figcaption class="roboto-medium text-center">
+                        LigaMaster <br><small class="roboto-condensed-light">Protegiendo la organizacion de tu
+                            liga</small>
+                    </figcaption>
+                </figure>
+                <div class="full-box nav-lateral-bar"></div>
+                <nav class="full-box nav-lateral-menu">
+                    <ul>
+                        <li>
+                            <a href="#" class="nav-btn-submenu"><i class="fas fa-trophy"></i> &nbsp; Campeonatos <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul>
+                                <li>
+                                    <a href="../home.html"><i class="fas fa-table fa-xs"></i> &nbsp; Tabla General</a>
+                                </li>
+                                <li>
+                                    <a href="../liga-estadisticas/liga-estadisticas.html"><i
+                                            class="fas fa-clipboard-list fa-fw"></i>
+                                        &nbsp;
+                                        Estadisticas</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-btn-submenu"><i class="fas fa-star"></i> &nbsp; Ligas <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul>
+                                <li>
+                                    <a href="../ligas/liga-list.html"><i class="fas fa-plus fa-fw"></i> &nbsp; Crear
+                                        Liga</a>
+                                </li>
+                                <li>
+                                    <a href="../agregar-equipoLiga/agregar-equipo.html"><i class="fas fa-plus"></i></i>
+                                        &nbsp; Agregar
+                                        Equipo</a>
+                                </li>
+                                <li>
+                                    <a href="../partidos/Partidos.html"><i class="fas fa-futbol"></i> &nbsp;
+                                        Partidos</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-btn-submenu"><i class="fas fa-shield-alt"></i> &nbsp; Equipo <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul>
+                                <li>
+                                    <a href="../equipos/lista-Equipos.html"><i class="fas fa-table fa-xs"></i> &nbsp;
+                                        Lista
+                                        Equipos</a>
+                                </li>
+                                <li>
+                                    <a href="../agregar-jugadoresEquipo/agregar-jugadores.html"><i
+                                            class="fas fa-plus"></i> &nbsp; Agregar
+                                        Jugadores</a>
+                                </li>
+                            </ul>
+                        <li>
+                            <a href="#" class="nav-btn-submenu"><i class="fas fa-flag"></i> &nbsp; Canchas <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul>
+                                <li>
+                                    <a href="../listado-cancha/listado-cancha.html"><i class="fas fa-table fa-xs"></i>
+                                        &nbsp; Alquilar
+                                        Cancha</a>
+                                </li>
+                            </ul>
+                        </li>
+                        </li>
+                        <li><a href="../jugadores/lista-jugadores.html"><i class="fas fa-users fa-fw"></i>
+                                &nbsp;Jugadores</a>
+                        </li>
+                        <li><a href="../crear-canchas/crear-canchas.html"><i class="fas fa-futbol"></i> &nbsp;Canchas</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+        <!-- Page content -->
+        <section class="full-box page-content">
+            <nav class="full-box navbar-info">
+                <a href="#" class="float-left show-nav-lateral">
+                    <i class="fas fa-exchange-alt"></i>
+                </a>
+                <a href="user-update.html">
+                    <i class="fas fa-user-cog"></i>
+                </a>
+                <a href="../index.html" class="btn-exit-system">
+                    <i class="fas fa-power-off"></i>
+                </a>
+            </nav>
+
+            <div class="full-box tile-container">
+                <div class="row justify-content-center">
+                    <!-- Seleccionar Liga -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card shadow-sm border-light">
+                            <div class="card-body">
+                                <h3 class="card-title text-primary text-center">Seleccione una Liga</h3>
+                                <select id="liga-select" class="form-control mb-3">
+                                    <option value="">Seleccione una liga...</option>
+                                    <!-- Las ligas se cargarán aquí con AJAX -->
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="row">
+                    <!-- Listado de Equipos -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card shadow-sm border-light">
+                            <div class="card-body">
+                                <h3 class="card-title text-primary">Listado de Equipos</h3>
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" placeholder="  Buscar Equipos..." id="buscar-equipo">
+                                    <button class="btn btn-primary" type="button" id="btn-buscar-equipo">
+                                        <i class="fas fa-search"></i> Buscar
+                                    </button>
+                                </div>
+                                <table class="table table-hover">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th>Logo</th>
+                                            <th>Nombre</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="equipos-lista">
+                                        <!-- Los equipos se cargarán aquí con AJAX -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                      <!-- Jugadores en Equipo Seleccionado -->
+                      <div class="col-md-4 mb-4">
+                        <div class="card shadow-sm border-light">
+                            <div class="card-body">
+                                <h3 class="card-title text-primary" id="Equipo-seleccionado-titulo">Equipo Seleccionado:</h3>
+                                <input type="hidden" id="equipo-id-seleccionado" value="">
+                                <table class="table table-hover">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th>Foto</th>
+                                            <th>Nombre</th>
+                                            <th>Eliminar</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="jugadores-agregados">
+                                        <!-- Aquí se cargarán los jugadores del equipo seleccionado -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Listado de Jugadores -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card shadow-sm border-light">
+                            <div class="card-body">
+                                <h3 class="card-title text-primary">Listado de Jugadores</h3>
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" placeholder="  Buscar Jugadores..." id="buscar-jugador">
+                                    <button class="btn btn-primary" type="button" id="btn-buscar-jugador">
+                                        <i class="fas fa-search"></i> Buscar
+                                    </button>
+                                </div>
+                                <table class="table table-hover">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th>Foto</th>
+                                            <th>Nombre</th>
+                                            <th>Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="jugadores-lista">
+                                        <!-- Los jugadores se cargarán aquí con AJAX -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+    </main>
+
+    <script src="../../js/jquery-3.4.1.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="./jugadores-equipo.js"></script>
+
+    <!--=============================================
+=            Include JavaScript files           =
+==============================================-->
+    <!-- jQuery V3.4.1 -->
+    <script src="../../js/jquery-3.4.1.min.js"></script>
+
+    <!-- popper -->
+    <script src="../../js/popper.min.js"></script>
+
+    <!-- Bootstrap V4.3 -->
+    <script src="../../js/bootstrap.min.js"></script>
+
+    <!-- jQuery Custom Content Scroller V3.1.5 -->
+    <script src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <!-- Bootstrap Material Design V4.0 -->
+    <script src="../../js/bootstrap-material-design.min.js"></script>
+    <script>$(document).ready(function () { $('body').bootstrapMaterialDesign(); });</script>
+
+    <script src="../../js/main.js"></script>
+</body>
+
+</html>

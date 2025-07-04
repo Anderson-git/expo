@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LigaMaster</title>
+
+    <!-- Google Fonts y FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/jugador.css">
+
+</head>
+<body>
+
+<header>
+    <div class="header-left">
+        <button id="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <img src="../../assets/img/ligamaster.png" alt="Logo LigaMaster">
+        <h1>LigaMaster</h1>
+    </div>
+    <div class="header-right">
+        <a href="user-update.html"><i class="fas fa-user-cog"></i></a>
+    </div>
+</header>
+
+<div class="main-container">
+    <!-- Navegación lateral -->
+    <nav id="sidebar">
+        <ul>
+            <li class="has-submenu">
+                <a href="#" onclick="toggleSubmenu(event)">🏆 Campeonatos</a>
+                <ul>
+                    <li><a href="../home.html"><i class="fas fa-table fa-xs"></i> Tabla General</a></li>
+                    <li><a href="../liga-estadisticas/liga-estadisticas.html"><i class="fas fa-chart-line fa-xs"></i> Estadísticas</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="#" onclick="toggleSubmenu(event)">⭐ Ligas</a>
+                <ul>
+                    <li><a href="../ligas/liga-list.html"><i class="fas fa-plus-circle fa-xs"></i> Crear Liga</a></li>
+                    <li><a href="../agregar-equipoLiga/agregar-equipo.html"><i class="fas fa-users fa-xs"></i> Agregar Equipo</a></li>
+                    <li><a href="../partidos/Partidos.html"><i class="fas fa-futbol fa-xs"></i> Partidos</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="#" onclick="toggleSubmenu(event)">🛡️ Equipos</a>
+                <ul>
+                    <li><a href="../equipos/lista-Equipos.html"><i class="fas fa-list fa-xs"></i> Lista de Equipos</a></li>
+                    <li><a href="../agregar-jugadoresEquipo/agregar-jugadores.html"><i class="fas fa-user-plus fa-xs"></i> Agregar Jugadores</a></li>
+                </ul>
+            </li>
+            <li><a href="../listado-cancha/listado-cancha.html"><i class="fas fa-map-marker-alt fa-xs"></i> Canchas</a></li>
+            <li><a href="../jugadores/lista-jugadores.html"><i class="fas fa-users fa-xs"></i> Jugadores</a></li>
+            <li><a href="../crear-canchas/crear-canchas.html"><i class="fas fa-plus-square fa-xs"></i> Crear Canchas</a></li>
+            <li><a href="../index.html"><i class="fas fa-power-off"></i> Cerrar Sesión</a></li>
+        </ul>
+    </nav>
+
+  
+      
+
+                <div class="full-box tile-container">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h2>Listado de Jugadores</h2>
+                        <button class="btn btn-primary" type="button" id="btn-buscar" onclick="mostrarModalCrear();">
+                            Registrar Nuevo Jugador
+                        </button>
+                    </div>
+
+                    <!-- Campo de búsqueda -->
+                    <div class="input-group mb-3 mt-3">
+                        <input type="text" class="form-control" placeholder="Buscar jugador..." id="buscar-jugador">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="button" id="btn-buscar-jugador">Buscar</button>
+                        </div>
+                    </div>
+
+                    <!-- Tabla de jugadores -->
+                    <table class="table table-hover mt-4">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Foto</th>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Edad</th>
+                                <th>DPI</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="jugadores-lista">
+                            <!-- Aquí se agregarán los jugadores -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </section>
+
+
+        <div class="modal fade" id="modalCrearJugador" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header bg-dark text-white d-flex justify-content-center position-relative">
+                        <h2 class="modal-title mx-auto">Registrar nuevo jugador</h2>
+                        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"
+                            style="position: absolute; right: 15px; top: 15px;">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body"> 
+                        <form id="formCrearJugador" enctype="multipart/form-data">
+                            <input type="hidden" name="accion" id="accion">
+                            <input type="hidden" name="jugador_id" id="jugador_id">
+                    
+                            <!-- Imagen de vista previa, con botón de cámara encima de la foto -->
+                            <div class="form-group text-center position-relative" style="justify-content: center;">
+                                <div class="image-container">
+                                    <img id="modalFoto" src="../../assets/img/logoFut.png" alt="Foto del Jugador" class="preview-logo">
+                                    <button type="button" class="btn-camera" onclick="document.getElementById('foto-jugador').click()">
+                                        <i class="fas fa-camera"></i>
+                                    </button>
+                                </div>
+                                <input type="file" id="foto-jugador" name="foto_jugador" class="form-control-file d-none" accept="image/*">
+                            </div>
+                    
+                            <!-- Campos de formulario en su posición original -->
+                            <div class="form-group">
+                                <label for="dpi-jugador">DPI del Jugador:</label>
+                                <input type="text" id="dpi-jugador" name="dpi_jugador" class="form-control" required maxlength="13" pattern="\d{13}" title="El DPI debe contener exactamente 13 dígitos numéricos.">
+                            </div>
+                            <div class="form-group">
+                                <label for="nombre-jugador">Nombre del Jugador:</label>
+                                <input type="text" id="nombre-jugador" name="nombre_jugador" class="form-control" required maxlength="15" pattern="[A-Za-zÀ-ÿ\s]{1,15}" title="El nombre solo debe contener letras.">
+                            </div>
+                            <div class="form-group">
+                                <label for="apellido-jugador">Apellido del Jugador:</label>
+                                <input type="text" id="apellido-jugador" name="apellido_jugador" class="form-control" required maxlength="15" pattern="[A-Za-zÀ-ÿ\s]{1,15}" title="El apellido solo debe contener letras.">
+                            </div>
+                            <div class="form-group">
+                                <label for="edad-jugador">Edad del Jugador:</label>
+                                <input type="number" id="edad-jugador" name="edad_jugador" class="form-control" required min="1" max="99" title="Ingrese una edad válida entre 1 y 99 años.">
+                            </div>
+                    
+                            <button type="submit" id="crearJugadorBtn" class="btn-save-general" value="Guardar">Guardar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+<footer>
+    <p>&copy; 2025 LigaMaster. Todos los derechos reservados.</p>
+</footer>
+        <script src="./jugador.js"></script>
+        <script src="../../js/main.js"></script>
+        
+<script>
+    function toggleSubmenu(e) {
+        e.preventDefault();
+        const parent = e.target.closest(".has-submenu");
+        parent.classList.toggle("active");
+    }
+
+    document.getElementById("menu-toggle").addEventListener("click", () => {
+        document.getElementById("sidebar").classList.toggle("active");
+    });
+</script>
+        
+</body>
+
+</html>

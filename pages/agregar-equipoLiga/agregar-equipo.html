@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LigaMaster</title>
+
+    <!-- Google Fonts y FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+
+</head>
+<body>
+
+<header>
+    <div class="header-left">
+        <button id="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <img src="../../assets/img/ligamaster.png" alt="Logo LigaMaster">
+        <h1>LigaMaster</h1>
+    </div>
+    <div class="header-right">
+        <a href="user-update.html"><i class="fas fa-user-cog"></i></a>
+    </div>
+</header>
+
+
+	<!-- Main container -->
+	<main class="full-box main-container">
+		<!-- Nav lateral -->
+      <nav id="sidebar">
+        <ul>
+            <li class="has-submenu">
+                <a href="#" onclick="toggleSubmenu(event)">🏆 Campeonatos</a>
+                <ul>
+                    <li><a href="../home.html"><i class="fas fa-table fa-xs"></i> Tabla General</a></li>
+                    <li><a href="../liga-estadisticas/liga-estadisticas.html"><i class="fas fa-chart-line fa-xs"></i> Estadísticas</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="#" onclick="toggleSubmenu(event)">⭐ Ligas</a>
+                <ul>
+                    <li><a href="../ligas/liga-list.html"><i class="fas fa-plus-circle fa-xs"></i> Crear Liga</a></li>
+                    <li><a href="../agregar-equipoLiga/agregar-equipo.html"><i class="fas fa-users fa-xs"></i> Agregar Equipo</a></li>
+                    <li><a href="../partidos/Partidos.html"><i class="fas fa-futbol fa-xs"></i> Partidos</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="#" onclick="toggleSubmenu(event)">🛡️ Equipos</a>
+                <ul>
+                    <li><a href="../equipos/lista-Equipos.html"><i class="fas fa-list fa-xs"></i> Lista de Equipos</a></li>
+                    <li><a href="../agregar-jugadoresEquipo/agregar-jugadores.html"><i class="fas fa-user-plus fa-xs"></i> Agregar Jugadores</a></li>
+                </ul>
+            </li>
+            <li><a href="../listado-cancha/listado-cancha.html"><i class="fas fa-map-marker-alt fa-xs"></i> Canchas</a></li>
+            <li><a href="../jugadores/lista-jugadores.html"><i class="fas fa-users fa-xs"></i> Jugadores</a></li>
+            <li><a href="../crear-canchas/crear-canchas.html"><i class="fas fa-plus-square fa-xs"></i> Crear Canchas</a></li>
+            <li><a href="../index.html"><i class="fas fa-power-off"></i> Cerrar Sesión</a></li>
+        </ul>
+    </nav>
+
+    
+           
+            <div class="full-box tile-container">
+                    <div class="row">
+                        <!-- Lista de Ligas -->
+                        <div class="col-3">
+                            <h2>Listado de Ligas</h2>
+                            <div class="input-group mb-3 mt-3">
+                                <input type="text" class="form-control" placeholder="Buscar liga..." id="buscar-liga">
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary" type="button" id="btn-buscar-liga">Buscar</button>
+                                </div>
+                            </div>
+                            <table class="table table-hover mt-4">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th>Logo</th>
+                                        <th>Nombre de la liga</th>
+                                        <th>Limite de equipos</th>   
+                                    </tr>
+                                </thead>
+                                <tbody id="ligas-lista">
+                                    <!-- Aquí se cargarán las ligas con AJAX -->
+                                </tbody>
+                            </table>
+                        </div>
+            
+                        <!-- Listado de Equipos en una Liga -->
+                        <div class="col-3">
+                            <h2>Listado Equipos</h2>
+                            <div class="input-group mb-3 mt-3">
+                                <input type="text" class="form-control" placeholder="Buscar equipo..." id="buscar-equipo">
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary" type="button" id="btn-buscar-equipo">Buscar</button>
+                                </div>
+                            </div>
+                            <table class="table table-hover mt-4">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th>Logo</th>
+                                        <th>Nombre</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="equipos-lista">
+                                    <!-- Aquí se cargarán los equipos con AJAX -->
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="col-3">
+                            <h2 id="liga-seleccionada-titulo">Liga Seleccionada: </h2>
+                            <table class="table table-hover mt-4">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th>Logo</th>
+                                        <th>Equipo</th>
+                                        <th>Eliminar</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="equipos-agregados"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <script src="./liga-equipo.js"></script>
+
+
+</body>
+
+</html>

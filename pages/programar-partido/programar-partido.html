@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Home</title>
+
+    
+</head>
+
+<body>
+
+    <!-- Main container -->
+    <main class="full-box main-container">
+        <!-- Nav lateral -->
+        <section class="full-box nav-lateral">
+            <div class="full-box nav-lateral-bg show-nav-lateral"></div>
+            <div class="full-box nav-lateral-content">
+                <figure class="full-box nav-lateral-avatar">
+                    <i class="far fa-times-circle show-nav-lateral"></i>
+                    <img src="../../assets/img/logoFut.png" class="img-fluid" alt="Avatar">
+                    <figcaption class="roboto-medium text-center">
+                        LigaMaster <br><small class="roboto-condensed-light">Protegiendo la organizacion de tu
+                            liga</small>
+                    </figcaption>
+                </figure>
+                <div class="full-box nav-lateral-bar"></div>
+                <nav class="full-box nav-lateral-menu">
+                    <ul>
+                        <li>
+                            <a href="#" class="nav-btn-submenu"><i class="fas fa-trophy"></i> &nbsp; Campeonatos <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul>
+                                <li>
+                                    <a href="../home.html"><i class="fas fa-table fa-xs"></i> &nbsp; Tabla General</a>
+                                </li>
+                                <li>
+                                    <a href="../liga-estadisticas/liga-estadisticas.html"><i
+                                            class="fas fa-clipboard-list fa-fw"></i>
+                                        &nbsp;
+                                        Estadisticas</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-btn-submenu"><i class="fas fa-star"></i> &nbsp; Ligas <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul>
+                                <li>
+                                    <a href="../ligas/liga-list.html"><i class="fas fa-plus fa-fw"></i> &nbsp; Crear
+                                        Liga</a>
+                                </li>
+                                <li>
+                                    <a href="../agregar-equipoLiga/agregar-equipo.html"><i class="fas fa-plus"></i></i>
+                                        &nbsp; Agregar
+                                        Equipo</a>
+                                </li>
+                                <li>
+                                    <a href="../partidos/Partidos.html"><i class="fas fa-futbol"></i> &nbsp;
+                                        Partidos</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-btn-submenu"><i class="fas fa-shield-alt"></i> &nbsp; Equipo <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul>
+                                <li>
+                                    <a href="../equipos/lista-Equipos.html"><i class="fas fa-table fa-xs"></i> &nbsp;
+                                        Lista
+                                        Equipos</a>
+                                </li>
+                                <li>
+                                    <a href="../agregar-jugadoresEquipo/agregar-jugadores.html"><i
+                                            class="fas fa-plus"></i> &nbsp; Agregar
+                                        Jugadores</a>
+                                </li>
+                            </ul>
+                        <li>
+                            <a href="#" class="nav-btn-submenu"><i class="fas fa-flag"></i> &nbsp; Canchas <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul>
+                                <li>
+                                    <a href="../listado-cancha/listado-cancha.html"><i class="fas fa-table fa-xs"></i>
+                                        &nbsp; Alquilar
+                                        Cancha</a>
+                                </li>
+                            </ul>
+                        </li>
+                        </li>
+                        <li><a href="../jugadores/lista-jugadores.html"><i class="fas fa-users fa-fw"></i>
+                                &nbsp;Jugadores</a>
+                        </li>
+                        <li><a href="../crear-canchas/crear-canchas.html"><i class="fas fa-futbol"></i>
+                                &nbsp;Canchas</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+        <!-- Page content -->
+        <section class="full-box page-content">
+            <nav class="full-box navbar-info">
+                <a href="#" class="float-left show-nav-lateral">
+                    <i class="fas fa-exchange-alt"></i>
+                </a>
+                <a href="user-update.html">
+                    <i class="fas fa-user-cog"></i>
+                </a>
+                <a href="../index.html" class="btn-exit-system">
+                    <i class="fas fa-power-off"></i>
+                </a>
+            </nav>
+
+            <!-- Columna izquierda: Programar Partidos -->
+            <div class="full-box tile-container">
+                <div class="container mt-10">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="card">
+                                <div class="card-header text-white" style="background-color: #343a40">
+                                    <h2>Programar Partidos</h2>
+                                </div>
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <label for="liga">Liga</label>
+                                        <select id="liga-select" class="form-control mb-3">
+                                            <option value="">Seleccione una liga...</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="jornada">Jornada:</label>
+                                        <select id="jornada-select" class="form-control mb-3">
+                                            <option value="">-- Seleccionar la jornada --</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="equipoLocal">Equipo Local:</label>
+                                        <select class="form-control" id="equipoLocal" required>
+                                            <option value="">-- Seleccionar Equipo --</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="equipoVisitante">Equipo Visitante:</label>
+                                        <select class="form-control" id="equipoVisitante" required>
+                                            <option value="">-- Seleccionar Equipo --</option>
+                                        </select>
+                                    </div>
+                                        <div class="form-group">
+                                            <label for="fecha">Fecha del Partido:</label>
+                                            <input type="date" class="form-control" id="fecha" required>
+                                        </div>
+                                
+                                        <div class="form-group">
+                                            <label for="hora">Hora del Partido:</label>
+                                            <input type="time" class="form-control" id="hora" required>
+                                        </div>
+
+                                    <div class="form-group">
+                                        <label for="cancha">Cancha</label>
+                                        <select id="cancha-select" class="form-control">
+                                            <option value="">Seleccione una cancha...</option>
+                                        </select>
+                                    </div>
+
+                                    <form>
+                                        <button type="submit" class="btn btn-primary">Agregar Partido</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    </div>
+
+    <script src="../../js/jquery-3.4.1.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="./programar-partido.js"></script>
+
+
+
+
+    <script src="../../js/main.js"></script>
+</body>
+
+</html>

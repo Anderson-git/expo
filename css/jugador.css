@@ -1,0 +1,282 @@
+/* ======= FUENTE GENERAL ======= */
+body {
+    background-color: #f4f6f9;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ======= SIDEBAR ======= */
+#sidebar {
+    background-color: #0b162c;
+    padding-top: 20px;
+    min-height: 100vh;
+    width: 230px;
+    position: fixed;
+    left: 0;
+    top: 70px;
+    transition: all 0.3s ease;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.4);
+}
+
+#sidebar ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+#sidebar ul li {
+    padding: 12px 20px;
+    border-bottom: 1px solid #1f2a3c;
+}
+
+#sidebar ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    font-size: 15px;
+    transition: all 0.2s ease;
+}
+
+#sidebar ul li:hover,
+#sidebar ul li.active {
+    background-color: #00eaff33;
+}
+
+/* ======= CONTENEDOR PRINCIPAL ======= */
+.main-container {
+    margin-left: 250px;
+    padding: 30px;
+}
+
+/* ======= BOTONES ======= */
+.btn-primary {
+    background-color: #00eaff;
+    color: #000;
+    font-weight: bold;
+    padding: 10px 18px;
+    border-radius: 30px;
+    border: none;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #00bcd4;
+}
+
+.btn-edit, .btn-eliminar {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-edit {
+    background-color: #ffc107;
+    color: #000;
+}
+
+.btn-eliminar {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* ======= INPUT DE BÚSQUEDA ======= */
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.input-group input {
+    flex: 1;
+    padding: 12px 20px;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+    color: #000;
+    transition: 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: #00eaff;
+    outline: none;
+}
+
+/* ======= TABLA ======= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #0d1117;
+    color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 10px #00eaff55;
+}
+
+table thead {
+    background-color: #00bcd4;
+    color: black;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #2c2c2c;
+}
+
+table img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* ======= MODAL GENERAL ======= */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    background: #0d1117;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+    color: white;
+    box-shadow: 0 0 20px #00eaff;
+    position: relative;
+}
+
+/* ======= CABECERA DEL MODAL ======= */
+.modal-header {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.modal-header h2 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.modal-header .close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* ======= INPUTS DEL FORMULARIO ======= */
+.modal-content input[type="text"],
+.modal-content input[type="number"],
+.modal-content input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: none;
+    background-color: #161b22;
+    color: white;
+    font-size: 15px;
+}
+
+.modal-content label {
+    font-weight: bold;
+    color: #00eaff;
+}
+
+/* ======= IMAGEN PREVIA Y CÁMARA ======= */
+.preview-logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.btn-camera {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background-color: #00eaff;
+    border: none;
+    color: black;
+    border-radius: 50%;
+    padding: 8px;
+    cursor: pointer;
+}
+
+/* ======= FORMULARIO GENERAL ======= */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #00eaff;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    background-color: #161b22;
+    color: white;
+}
+
+/* ======= BOTÓN GUARDAR DEL MODAL ======= */
+.btn-save-general,
+.modal-content button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background: #00eaff;
+    color: #000;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn-save-general:hover,
+.modal-content button[type="submit"]:hover {
+    background: #00bcd4;
+}
+

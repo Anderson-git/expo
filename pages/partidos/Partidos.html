@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Home</title>
+
+    <!-- Normalize V8.0.1 -->
+    <link rel="stylesheet" href="../../css/normalize.css">
+
+    <!-- Bootstrap V4.3 -->
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+
+    <!-- Bootstrap Material Design V4.0 -->
+    <link rel="stylesheet" href="../../css/bootstrap-material-design.min.css">
+
+    <!-- Font Awesome V5.9.0 -->
+    <link rel="stylesheet" href="../../css/all.css">
+
+    <!-- Sweet Alerts V8.13.0 CSS file -->
+    <link rel="stylesheet" href="../../css/sweetalert2.min.css">
+
+    <!-- Sweet Alert V8.13.0 JS file-->
+    <script src="../../js/sweetalert2.min.js"></script>
+
+    <!-- jQuery Custom Content Scroller V3.1.5 -->
+    <link rel="stylesheet" href="../../css/jquery.mCustomScrollbar.css">
+
+    <!-- General Styles -->
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        /* General */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7fc;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Contenedor principal */
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            margin: 20px auto;
+            padding: 10px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Títulos y detalles */
+        .info-partido {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .info-partido p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+
+        .info-partido strong {
+            color: #3498db;
+        }
+
+        /* Equipos */
+        .equipo-local,
+        .equipo-visitante {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-weight: bold;
+            color: #444;
+            margin: 0 10px;
+        }
+
+        .equipo-logo img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: 2px solid #dcdfe3;
+            padding: 5px;
+            background-color: #f4f7fc;
+        }
+
+        /* Resultado */
+        .resultado {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: #f8f9fa;
+            padding: 5px;
+            border-radius: 2px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #34495e;
+            border: 1px solid #dcdfe3;
+        }
+
+        /* Botones */
+        .botones {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 10px;
+        }
+
+        .botones button,
+        .botones a {
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 6px;
+            border: none;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .botones button:hover,
+        .botones a:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+        }
+
+        /* Responsividad */
+        @media (max-width: 768px) {
+            .card {
+                padding: 15px;
+                max-width: 95%;
+                /* Se adapta al tamaño de la pantalla */
+            }
+
+            .botones {
+                flex-direction: row;
+                justify-content: center;
+                gap: 8px;
+            }
+
+            .info-partido {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        button:disabled,
+        a:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+
+        button:disabled i,
+        a:disabled i {
+            color: #999;
+        }
+
+        /* Estilo para enlaces deshabilitados */
+        a[style*="pointer-events: none;"] {
+            color: #ccc;
+            pointer-events: none;
+        }
+
+        a[style*="pointer-events: none;"] i {
+            color: #ccc;
+        }
+       
+    .input-group select {
+        margin-right: 10px; /* Espacio entre los select */
+    }
+    .input-group select:last-child {
+        margin-right: 0; /* Quitar margen al último select */
+    }
+    </style>
+
+
+</head>
+
+<body>
+
+    <!-- Main container -->
+    <main class="full-box main-container">
+        <!-- Nav lateral -->
+        <section class="full-box nav-lateral">
+            <div class="full-box nav-lateral-bg show-nav-lateral"></div>
+            <div class="full-box nav-lateral-content">
+                <figure class="full-box nav-lateral-avatar">
+                    <i class="far fa-times-circle show-nav-lateral"></i>
+                    <img src="../../assets/img/logoFut.png" class="img-fluid" alt="Avatar">
+                    <figcaption class="roboto-medium text-center">
+                        LigaMaster <br><small class="roboto-condensed-light">Protegiendo la organizacion de tu
+                            liga</small>
+                    </figcaption>
+                </figure>
+                <div class="full-box nav-lateral-bar"></div>
+                <nav class="full-box nav-lateral-menu">
+                    <ul>
+                        <li>
+                            <a href="#" class="nav-btn-submenu"><i class="fas fa-trophy"></i> &nbsp; Campeonatos <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul>
+                                <li>
+                                    <a href="../home.html"><i class="fas fa-table fa-xs"></i> &nbsp; Tabla General</a>
+                                </li>
+                                <li>
+                                    <a href="../liga-estadisticas/liga-estadisticas.html"><i
+                                            class="fas fa-clipboard-list fa-fw"></i>
+                                        &nbsp;
+                                        Estadisticas</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-btn-submenu"><i class="fas fa-star"></i> &nbsp; Ligas <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul>
+                                <li>
+                                    <a href="../ligas/liga-list.html"><i class="fas fa-plus fa-fw"></i> &nbsp; Crear
+                                        Liga</a>
+                                </li>
+                                <li>
+                                    <a href="../agregar-equipoLiga/agregar-equipo.html"><i class="fas fa-plus"></i></i>
+                                        &nbsp; Agregar
+                                        Equipo</a>
+                                </li>
+                                <li>
+                                    <a href="../partidos/Partidos.html"><i class="fas fa-futbol"></i> &nbsp;
+                                        Partidos</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-btn-submenu"><i class="fas fa-shield-alt"></i> &nbsp; Equipo <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul>
+                                <li>
+                                    <a href="../equipos/lista-Equipos.html"><i class="fas fa-table fa-xs"></i> &nbsp;
+                                        Lista
+                                        Equipos</a>
+                                </li>
+                                <li>
+                                    <a href="../agregar-jugadoresEquipo/agregar-jugadores.html"><i
+                                            class="fas fa-plus"></i> &nbsp; Agregar
+                                        Jugadores</a>
+                                </li>
+                            </ul>
+                        <li>
+                            <a href="#" class="nav-btn-submenu"><i class="fas fa-flag"></i> &nbsp; Canchas <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul>
+                                <li>
+                                    <a href="../listado-cancha/listado-cancha.html"><i class="fas fa-table fa-xs"></i>
+                                        &nbsp; Alquilar
+                                        Cancha</a>
+                                </li>
+                            </ul>
+                        </li>
+                        </li>
+                        <li><a href="../jugadores/lista-jugadores.html"><i class="fas fa-users fa-fw"></i>
+                                &nbsp;Jugadores</a>
+                        </li>
+                        <li><a href="../crear-canchas/crear-canchas.html"><i class="fas fa-futbol"></i>
+                                &nbsp;Canchas</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+        <!-- Page content -->
+        <section class="full-box page-content">
+            <nav class="full-box navbar-info">
+                <a href="#" class="float-left show-nav-lateral">
+                    <i class="fas fa-exchange-alt"></i>
+                </a>
+                <a href="user-update.html">
+                    <i class="fas fa-user-cog"></i>
+                </a>
+                <a href="../index.html" class="btn-exit-system">
+                    <i class="fas fa-power-off"></i>
+                </a>
+            </nav>
+
+
+            <div class="full-box tile-container">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h2>Partidos Programados</h2>
+                    <a href="../programar-partido/programar-partido.html" class="btn btn-primary">Programar Partido</a>
+                </div>
+
+                <div class="input-group mb-3">
+                    <select id="select-liga" class="form-control me-2" onchange="filtrarPartidos()">
+                        <option value="">Seleccionar Liga</option>
+                    </select>
+                
+                    <select id="select-jornada" class="form-control me-2" onchange="filtrarPartidos()">
+                        <option value="">Seleccionar Jornada</option>
+                    </select>
+                
+                    <select id="select-estadoPartido" class="form-control" onchange="filtrarPartidos()">
+                        <option value="">Seleccionar estado partido</option>
+                    </select>
+                </div>
+                
+
+                <div id="partidos-lista">
+                    <!-- Aquí se agregarán las tarjetas de partidos -->
+                </div>
+            </div>
+
+
+
+
+        </section>
+    </main>
+
+
+    <script src="../../js/jquery-3.4.1.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="./partidos.js"></script>
+
+    <!--=============================================
+=            Include JavaScript files           =
+==============================================-->
+    <!-- jQuery V3.4.1 -->
+    <script src="../../js/jquery-3.4.1.min.js"></script>
+
+    <!-- popper -->
+    <script src="../../js/popper.min.js"></script>
+
+    <!-- Bootstrap V4.3 -->
+    <script src="../../js/bootstrap.min.js"></script>
+
+    <!-- jQuery Custom Content Scroller V3.1.5 -->
+    <script src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <!-- Bootstrap Material Design V4.0 -->
+    <script src="../../js/bootstrap-material-design.min.js"></script>
+    <script>$(document).ready(function () { $('body').bootstrapMaterialDesign(); });</script>
+
+    <script src="../../js/main.js"></script>
+</body>
+
+</html>

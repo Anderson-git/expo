@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Home</title>
+
+    <!-- Normalize V8.0.1 -->
+    <link rel="stylesheet" href="../../css/normalize.css">
+
+    <!-- Bootstrap V4.3 -->
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+
+    <!-- Bootstrap Material Design V4.0 -->
+    <link rel="stylesheet" href="../../css/bootstrap-material-design.min.css">
+
+    <!-- Font Awesome V5.9.0 -->
+    <link rel="stylesheet" href="../../css/all.css">
+
+    <!-- Sweet Alerts V8.13.0 CSS file -->
+    <link rel="stylesheet" href="../../css/sweetalert2.min.css">
+
+    <!-- Sweet Alert V8.13.0 JS file-->
+    <script src="../../js/sweetalert2.min.js"></script>
+
+    <!-- jQuery Custom Content Scroller V3.1.5 -->
+    <link rel="stylesheet" href="../../css/jquery.mCustomScrollbar.css">
+
+    <!-- General Styles -->
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+
+
+</head>
+
+<body>
+
+    <!-- Main container -->
+    <main class="full-box main-container">
+        <!-- Nav lateral -->
+        <section class="full-box nav-lateral">
+            <div class="full-box nav-lateral-bg show-nav-lateral"></div>
+            <div class="full-box nav-lateral-content">
+                <figure class="full-box nav-lateral-avatar">
+                    <i class="far fa-times-circle show-nav-lateral"></i>
+                    <img src="../../assets/img/logoFut.png" class="img-fluid" alt="Avatar">
+                    <figcaption class="roboto-medium text-center">
+                        LigaMaster <br><small class="roboto-condensed-light">Protegiendo la organizacion de tu
+                            liga</small>
+                    </figcaption>
+                </figure>
+                <div class="full-box nav-lateral-bar"></div>
+                <nav class="full-box nav-lateral-menu">
+                    <ul>
+                        <li>
+                            <a href="#" class="nav-btn-submenu"><i class="fas fa-trophy"></i> &nbsp; Campeonatos <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul>
+                                <li>
+                                    <a href="../home.html"><i class="fas fa-table fa-xs"></i> &nbsp; Tabla General</a>
+                                </li>
+                                <li>
+                                    <a href="../liga-estadisticas/liga-estadisticas.html"><i
+                                            class="fas fa-clipboard-list fa-fw"></i>
+                                        &nbsp;
+                                        Estadisticas</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-btn-submenu"><i class="fas fa-star"></i> &nbsp; Ligas <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul>
+                                <li>
+                                    <a href="../ligas/liga-list.html"><i class="fas fa-plus fa-fw"></i> &nbsp; Crear
+                                        Liga</a>
+                                </li>
+                                <li>
+                                    <a href="../agregar-equipoLiga/agregar-equipo.html"><i class="fas fa-plus"></i></i>
+                                        &nbsp; Agregar
+                                        Equipo</a>
+                                </li>
+                                <li>
+                                    <a href="../partidos/Partidos.html"><i class="fas fa-futbol"></i> &nbsp;
+                                        Partidos</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-btn-submenu"><i class="fas fa-shield-alt"></i> &nbsp; Equipo <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul>
+                                <li>
+                                    <a href="../equipos/lista-Equipos.html"><i class="fas fa-table fa-xs"></i> &nbsp;
+                                        Lista
+                                        Equipos</a>
+                                </li>
+                                <li>
+                                    <a href="../agregar-jugadoresEquipo/agregar-jugadores.html"><i
+                                            class="fas fa-plus"></i> &nbsp; Agregar
+                                        Jugadores</a>
+                                </li>
+                            </ul>
+                        <li>
+                            <a href="#" class="nav-btn-submenu"><i class="fas fa-flag"></i> &nbsp; Canchas <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul>
+                                <li>
+                                    <a href="../listado-cancha/listado-cancha.html"><i class="fas fa-table fa-xs"></i>
+                                        &nbsp; Alquilar
+                                        Cancha</a>
+                                </li>
+                            </ul>
+                        </li>
+                        </li>
+                        <li><a href="../jugadores/lista-jugadores.html"><i class="fas fa-users fa-fw"></i>
+                                &nbsp;Jugadores</a>
+                        </li>
+                        <li><a href="../crear-canchas/crear-canchas.html"><i class="fas fa-futbol"></i> &nbsp;Canchas</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+        <!-- Page content -->
+        <section class="full-box page-content">
+            <nav class="full-box navbar-info">
+                <a href="#" class="float-left show-nav-lateral">
+                    <i class="fas fa-exchange-alt"></i>
+                </a>
+                <a href="user-update.html">
+                    <i class="fas fa-user-cog"></i>
+                </a>
+                <a href="../index.html" class="btn-exit-system">
+                    <i class="fas fa-power-off"></i>
+                </a>
+            </nav>
+
+
+            <div class="full-box tile-container">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h2>Listado de Ligas</h2>
+                    <!-- Botón para crear una nueva liga -->
+                    <button class="btn btn-primary" type="button" id="btn-buscar" onclick="mostrarModalCrearLiga();">
+                        Registrar Nueva Liga
+                    </button>
+                </div>
+
+                <!-- Campo de búsqueda -->
+                <div class="input-group mb-3 mt-3">
+                    <input type="text" class="form-control" placeholder="Buscar liga..." id="buscar-liga">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button" id="btn-buscar-liga">Buscar</button>
+                    </div>
+                </div>
+
+                <!-- Tabla de ligas -->
+                <table class="table table-hover mt-4">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Logo</th>
+                            <th>Nombre de la Liga</th>
+                            <th>Cantidad de Equipos</th>
+                            <th>Equipos Inscritos</th>
+                            <th>Precio de la Liga</th>
+                            <th>Cupo Disponible</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="ligas-lista">
+                        <!-- Aquí se mostrarán las ligas listadas -->
+
+                    </tbody>
+                </table>
+            </div>
+
+
+            <div class="modal fade" id="modalCrearLiga" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <!-- Header del Modal -->
+                        <div class="modal-header bg-dark text-white justify-content-center position-relative">
+                            <h2 class="modal-title font-weight-bold" id="modalLabel">Registrar nueva liga</h2>
+                            <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"
+                                style="position: absolute; right: 15px; top: 15px;">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <!-- Cuerpo del Modal -->
+                        <div class="modal-body">
+                            <form id="formCrearLiga" enctype="multipart/form-data">
+                                <input type="hidden" name="accion" id="accion">
+                                <input type="hidden" name="liga_id" id="liga_id">
+
+                                <!-- Imagen de vista previa del logo -->
+                                <div class="form-row text-center" style="justify-content: center;">
+                                    <div class="form-group text-center position-relative">
+                                        <img id="modallogo" src="../../assets/img/logoFut.png" alt="logo de la liga"
+                                            class="preview-logo rounded-circle">
+                                        <button type="button" class="btn-camera"
+                                            onclick="document.getElementById('logo-liga').click()">
+                                            <i class="fas fa-camera"></i>
+                                        </button>
+                                        <input type="file" id="logo-liga" name="logo" class="form-control-file d-none"
+                                            accept="image/*">
+                                    </div>
+                                </div>
+                                <!-- Campos de entrada en dos columnas -->
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="nombre-liga">Nombre de la liga:</label>
+                                        <input type="text" id="nombre-liga" name="nombre_liga" class="form-control"
+                                            placeholder="Ingrese nombre de la liga" required maxlength="25"
+                                            pattern="[A-Za-zÀ-ÿ\s]{1,25}"
+                                            title="El nombre de la liga solo debe contener letras.">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="encargado-liga">Nombre del encargado:</label>
+                                        <input type="text" id="encargado-liga" name="nombre_encargado"
+                                            class="form-control" placeholder="Ingrese nombre del encargado" required
+                                            maxlength="20" pattern="[A-Za-zÀ-ÿ\s]{1,25}"
+                                            title="El nombre del encargado solo debe contener letras.">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="telefono-encargado-liga">Número de Teléfono del Encargado:</label>
+                                        <input type="tel" id="telefono-encargado-liga" name="telefono_encargado"
+                                            class="form-control" placeholder="Ingrese número de teléfono" maxlength="8"
+                                            pattern="\d{8}" title="El numero tiene que tener 8 digitos.">
+                                        <small class="form-text text-muted">Formato: 8 dígitos.</small>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="limites-equipos">Límite de equipos:</label>
+                                        <input type="number" id="limites-equipos" name="limite_equipos"
+                                            class="form-control" placeholder="Ingrese límite de equipos" required
+                                            min="1" max="32" title="El límite de equipos es de 32.">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="cuota-equipo">Cuota por Equipo:</label>
+                                        <input type="number" step="0.01" id="cuota-equipo" name="cuota_por_equipo"
+                                            class="form-control" placeholder="Ingrese la cuota" required min="0"
+                                            max="9999" title="La cuota debe ser un valor numérico de hasta 4 dígitos.">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="limite-jugadores">Límite de jugadores:</label>
+                                        <input type="number" id="limite-jugadores" name="limite_jugadores"
+                                            class="form-control" placeholder="Ingrese límite de jugadores" required
+                                            min="1" max="20" title="El límite de jugadores debe estar entre 1 y 20.">
+                                    </div>
+                                </div>
+
+                                <!-- Botón de guardar -->
+                                <div class="text-center mt-4">
+                                    <button type="submit" id="crearLigaBtn"
+                                        class="btn btn-primary btn-save">Guardar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <script src="../../js/jquery-3.4.1.min.js"></script>
+            <script src="../../js/bootstrap.min.js"></script>
+            <script src="./ligas.js"></script>
+
+        </section>
+    </main>
+
+    <!--=============================================
+=            Include JavaScript files           =
+==============================================-->
+    <!-- jQuery V3.4.1 -->
+    <script src="../../js/jquery-3.4.1.min.js"></script>
+
+    <!-- popper -->
+    <script src="../../js/popper.min.js"></script>
+
+    <!-- Bootstrap V4.3 -->
+    <script src="../../js/bootstrap.min.js"></script>
+
+    <!-- jQuery Custom Content Scroller V3.1.5 -->
+    <script src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <!-- Bootstrap Material Design V4.0 -->
+    <script src="../../js/bootstrap-material-design.min.js"></script>
+    <script>$(document).ready(function () { $('body').bootstrapMaterialDesign(); });</script>
+
+    <script src="../../js/main.js"></script>
+</body>
+
+</html>
