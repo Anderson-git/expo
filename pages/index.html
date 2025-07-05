@@ -1,0 +1,155 @@
+<?php
+// Puedes agregar lógica PHP aquí si es necesario en el futuro.
+?>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIGAMASTER - Iniciar Sesión</title>
+
+    <!-- Normalize V8.0.1 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    <!-- Bootstrap V4.3 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- Font Awesome V5.9.0 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+
+    <style>
+        body {
+            display: flex;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .left-column {
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+        }
+
+        .right-column {
+            background-color: #2e3e4e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+        }
+
+        .logo img {
+            max-width: 100%;
+            height: auto;
+            width: 700px; /* Ajusta el tamaño según sea necesario */
+        }
+
+        .login-content {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 300px;
+        }
+
+        .login-content i {
+            color: #2e3e4e;
+        }
+
+        .login-content h2 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .form-group label {
+            text-align: left;
+            color: #666;
+        }
+
+        .btn-login {
+            background-color: #2e3e4e;
+            color: #fff;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            display: block; /* Asegura que el botón ocupe todo el ancho */
+            margin-top: 20px; /* Espacio entre el campo de contraseña y el botón */
+        }
+
+        .btn-login:hover {
+            background-color: #1c2b39;
+        }
+
+        .btn-details {
+            background-color: #e67e22;
+            color: #fff;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            display: block; /* Asegura que el botón ocupe todo el ancho */
+            margin-top: 30px; /* Mayor espacio para separar los botones */
+        }
+
+        .btn-details:hover {
+            background-color: #d35400;
+        }
+
+        .mt-4 {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Columna izquierda para el logo -->
+    <div class="left-column">
+        <div class="logo">
+            <!-- Cambia 'your-logo.png' con la ruta de tu logo -->
+            <img src="../assets/img/futlogo.png" alt="LIGAMASTER Logo">
+        </div>
+    </div>
+
+    <!-- Columna derecha para el formulario de login -->
+    <div class="right-column">
+        <div class="login-content">
+            <p class="text-center">
+                <i class="fas fa-user-circle fa-5x"></i>
+            </p>
+            <p class="text-center">Inicia sesión con tu cuenta</p>
+            <form action="">
+                <div class="form-group">
+                    <label for="UserName" class="bmd-label-floating"><i class="fas fa-user-secret"></i> &nbsp; Usuario</label>
+                    <input type="text" class="form-control" id="UserName" name="usuario" pattern="[a-zA-Z0-9]{1,35}" maxlength="35">
+                </div>
+                <div class="form-group">
+                    <label for="UserPassword" class="bmd-label-floating"><i class="fas fa-key"></i> &nbsp; Contraseña</label>
+                    <input type="password" class="form-control" id="UserPassword" name="clave" maxlength="200">
+                </div>
+                <a href="home.html" class="btn-login text-center">Iniciar Sesión</a>
+                <a href="home.html" class="btn-details text-center mt-3">Detalles</a>
+            </form>
+        </div>
+    </div>
+
+    <!-- Incluye los archivos JavaScript -->
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="./js/bootstrap-material-design.min.js"></script>
+    <script>
+        $(document).ready(function() { $('body').bootstrapMaterialDesign(); });
+    </script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

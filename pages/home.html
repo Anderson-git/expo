@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Home</title>
+
+	<!-- Normalize V8.0.1 -->
+	<link rel="stylesheet" href="../css/normalize.css">
+
+	<!-- Bootstrap V4.3 -->
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+
+	<!-- Bootstrap Material Design V4.0 -->
+	<link rel="stylesheet" href="../css/bootstrap-material-design.min.css">
+
+	<!-- Font Awesome V5.9.0 -->
+	<link rel="stylesheet" href="../css/all.css">
+
+	<!-- Sweet Alerts V8.13.0 CSS file -->
+	<link rel="stylesheet" href="../css/sweetalert2.min.css">
+
+	<!-- Sweet Alert V8.13.0 JS file-->
+	<script src="../js/sweetalert2.min.js"></script>
+
+	<!-- jQuery Custom Content Scroller V3.1.5 -->
+	<link rel="stylesheet" href="../css/jquery.mCustomScrollbar.css">
+
+	<!-- General Styles -->
+	<link rel="stylesheet" href="../css/style.css">
+
+
+</head>
+
+<body>
+
+	<!-- Main container -->
+	<main class="full-box main-container">
+		<!-- Nav lateral -->
+		<section class="full-box nav-lateral">
+            <div class="full-box nav-lateral-bg show-nav-lateral"></div>
+            <div class="full-box nav-lateral-content">
+                <figure class="full-box nav-lateral-avatar">
+                    <i class="far fa-times-circle show-nav-lateral"></i>
+                    <img src="../assets/img/logoFut.png" class="img-fluid" alt="Avatar">
+                    <figcaption class="roboto-medium text-center">
+                        LigaMaster <br><small class="roboto-condensed-light">Protegiendo la organizacion de tu liga</small>
+                    </figcaption>
+                </figure>
+				<div class="full-box nav-lateral-bar"></div>
+				<nav class="full-box nav-lateral-menu">
+                    <ul>
+                        <li>
+							<a  href="#" class="nav-btn-submenu"><i class="fas fa-trophy"></i> &nbsp; Campeonatos <i class="fas fa-chevron-down"></i></a>
+							<ul>
+								<li>
+									<a href="home.html"><i class="fas fa-table fa-xs"></i> &nbsp; Tabla General</a>
+								</li>
+								<li>
+									<a href="./liga-estadisticas/liga-estadisticas.html"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Estadisticas</a>
+								</li>
+							</ul>
+						</li>
+                        <li>
+							<a  href="#" class="nav-btn-submenu"><i class="fas fa-star"></i> &nbsp; Ligas <i class="fas fa-chevron-down"></i></a>
+							<ul>
+								<li>
+									<a href="./ligas/liga-list.html"><i class="fas fa-plus fa-fw"></i> &nbsp; Crear Liga</a>
+								</li>
+								<li>
+									<a href="./agregar-equipoLiga/agregar-equipo.html"><i class="fas fa-plus"></i></i> &nbsp; Agregar Equipo</a>
+								</li>
+								<li>
+									<a href="./partidos/Partidos.html"><i class="fas fa-futbol"></i> &nbsp; Partidos</a>
+								</li>
+							</ul>
+						</li>	
+                        <li>
+							<a  href="#" class="nav-btn-submenu"><i class="fas fa-shield-alt"></i> &nbsp; Equipo <i class="fas fa-chevron-down"></i></a>
+							<ul>
+								<li>
+									<a href="./equipos/lista-Equipos.html"><i class="fas fa-table fa-xs"></i> &nbsp; Lista Equipos</a>
+								</li>
+								<li>
+									<a href="./agregar-jugadoresEquipo/agregar-jugadores.html"><i class="fas fa-plus"></i> &nbsp; Agregar Jugadores</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a  href="#" class="nav-btn-submenu"><i class="fas fa-flag"></i> &nbsp; Canchas <i class="fas fa-chevron-down"></i></a>
+							<ul>
+								<li>
+									<a href="./listado-cancha/listado-cancha.html"><i class="fas fa-table fa-xs"></i> &nbsp; Alquilar Cancha</a>
+								</li>
+							</ul>
+						</li>
+                        <li><a href="./jugadores/lista-jugadores.html"><i class="fas fa-users fa-fw"></i> &nbsp;Jugadores</a></li>
+						<li><a href="./crear-canchas/crear-canchas.html"><i class="fas fa-futbol"></i> &nbsp;Canchas</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+		
+
+		<!-- Page content -->
+		<section class="full-box page-content">
+			<nav class="full-box navbar-info">
+				<a href="#" class="float-left show-nav-lateral">
+					<i class="fas fa-exchange-alt"></i>
+				</a>
+				<a href="user-update.html">
+					<i class="fas fa-user-cog"></i>
+				</a>
+				<a href="index.html" class="btn-exit-system">
+					<i class="fas fa-power-off"></i>
+				</a>
+			</nav>
+
+			<!-- Page header -->
+			<div class="full-box page-header">
+				<h3 class="text-left">
+					<i class="fas fa-trophy"></i> &nbsp; Campeonatos
+				</h3>
+				<p class="text-justify">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit nostrum rerum animi natus beatae
+					ex. Culpa blanditiis tempore amet alias placeat, obcaecati quaerat ullam, sunt est, odio aut veniam
+					ratione.
+				</p>
+			</div>
+
+			<!-- Content -->
+			<div class="full-box tile-container" id="tileContainer"></div>
+
+			<script>
+				const leagues = [
+					{ name: "Liga las Brisas", registered: 5, icon: "fas fa-users", link: "client-new.html" },
+					{ name: "Serie A", registered: 9, icon: "fas fa-pallet", link: "item-list.html" },
+					{ name: "Premier League", registered: 10, icon: "fas fa-file-invoice-dollar", link: "reservation-list.html" },
+					{ name: "LaLiga", registered: 50, icon: "fas fa-user-secret", link: "user-list.html" },
+					{ name: "Brasileirao", registered: 1, icon: "fas fa-store-alt", link: "company.html" },
+					{ name: "Bundesliga", registered: 5, icon: "fas fa-users", link: "client-new.html" },
+					{ name: "Primeira Liga", registered: 9, icon: "fas fa-pallet", link: "item-list.html" },
+					{ name: "Eredivisie", registered: 10, icon: "fas fa-file-invoice-dollar", link: "reservation-list.html" },
+					{ name: "Jupiler Pro League", registered: 50, icon: "fas fa-user-secret", link: "user-list.html" },
+					{ name: "MLS", registered: 1, icon: "fas fa-store-alt", link: "company.html" }
+				];
+
+				const container = document.getElementById('tileContainer');
+
+				leagues.forEach(league => {
+					container.innerHTML += `
+            <a href="${league.link}" class="tile">
+                <div class="tile-tittle">${league.name}</div>
+                <div class="tile-icon">
+                    <i class="${league.icon} fa-fw"></i>
+                    <p>${league.registered} Registrados</p>
+                </div>
+            </a>
+        `;
+				});
+			</script>
+
+
+
+		</section>
+	</main>
+
+
+	<!--=============================================
+	=            Include JavaScript files           =
+	==============================================-->
+	<!-- jQuery V3.4.1 -->
+	<script src="../js/jquery-3.4.1.min.js"></script>
+
+	<!-- popper -->
+	<script src="../js/popper.min.js"></script>
+
+	<!-- Bootstrap V4.3 -->
+	<script src="../js/bootstrap.min.js"></script>
+
+	<!-- jQuery Custom Content Scroller V3.1.5 -->
+	<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+	<!-- Bootstrap Material Design V4.0 -->
+	<script src="../js/bootstrap-material-design.min.js"></script>
+	<script>$(document).ready(function () { $('body').bootstrapMaterialDesign(); });</script>
+
+	<script src="../js/main.js"></script>
+</body>
+
+</html>
